@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button:active, button:focus{
+    outline: none;
+}
+
+/* HEADER SECTION */
+
+.header{
+    text-align: center;
+    padding-top: 48px;
+}
+
+.header__logo{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.header-content{
+    display: flex;
+    justify-content: center;
+}
+
+.header__hero-text{
+    margin: 0 auto;
+}
+
+.header__hero-tablet{
+    display: none;
+}
+
+.header__hero-text h1{
+    max-width: 445px;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 64px;
+    color: #28283D;
+    margin: 0 auto 34px auto;
+}
+
+.header__hero-text p{
+    max-width: 540px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #87879D;
+    margin-bottom: 32px;
+    line-height: 20px;
+}
+
+.header__button{
+    display: flex;
+    justify-content: center;
+}
+
+.header__button .dl, .header__button .what{
+    color: #fff;
+    border-radius: 29px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.header__button .dl{
+    background: #4D96A9;
+    padding: 16px 40px;
+    margin-right: 16px;
+}
+
+.dl span{
+    color: #8FE3F9;
+}
+
+.header__button .what{
+    background: #855FB1;
+    padding: 16px 29px;
+}
+
+.number-box{
+    text-align: center;
+    font-size: 16px;
+}
+
+/* NUMBER N°1 & N°2 SECTION */
+
+.number-box .number{
+    width: 56px;
+    height: 56px;
+    color: #87879D;
+    font-weight: 900;
+    padding: 15px 19px;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    border-radius: 50%;
+    display: inline-block;
+    background: #fafafa;
+    margin-top: 150px;
+    position: relative;
+}
+
+.number-box .number::after{
+    content: "";
+    width: 1px;
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    top: -84px;
+    background: rgba(135, 135, 157, 0.25);
+    display: block;
+    transform: translateX(-50%);
+}
+
+/* CARDS SECTION GRID */
+
+.cards-box{
+    margin-top: 64px;
+}
+
+.cards-wrapper{
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "card1 card2 card3 card4";
+    column-gap: 30px;
+    margin: 0 auto 80px auto;
+}
+
+.cards-wrapper .card{
+    width: 255px;
+}
+
+.card1{
+    grid-area: "card1";
+}
+
+.card2{
+    grid-area: "card2";
+}
+
+.card3{
+    grid-area: "card3";
+}
+
+.card4{
+    grid-area: "card4";
+}
+
+.card img{
+    border-radius: 8px;
+}
+
+/* CENTER TEXT SECTION */
+
+.text__meeting{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.text__meeting-wrapper{
+    max-width: 540px;
+}
+
+.text__meeting-wrapper h2{
+    font-weight: 900;
+    font-size: 16px;
+    color: #4D96A9;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.text__meeting-wrapper h3{
+    font-size: 40px;
+    font-weight: 900;
+    color: #28283D;
+    line-height: 44px;
+    margin: 0 auto 16px auto;
+    max-width: 445px;
+}
+
+.text__meeting-wrapper p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #87879D;
+    line-height: 26px;
+    margin-bottom: 32px;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    background-image: url(./assets/desktop/image-footer.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fafafa;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+footer .overlay{
+    background:  #4D96A9;
+    position: absolute;
+    opacity: 0.89;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 308px;
+}
+
+.footer-content h4{
+    max-width: 350px;
+    font-weight: 900;
+    font-size: 40px;
+    margin-right: 125px;
+}
+
+.footer-content p{
+    max-width: 350px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 86px;
+}
+
+.footer-content button{
+    background: #855FB1;
+    border-radius: 29px;
+    border: none;
+    white-space: nowrap;
+    padding: 16px 40px;
+}
+
+.footer-content button a{
+    color: #fafafa;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.footer-content button span{
+    color: #D9B8FF;
+}
+
+.two .number{
+    transform: translateY(30px);
+    z-index: 3;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+/* ****RESPONSIVE PART**** */
+
+/* GENERAL */
+
+@media (max-width: 1200px){
+    .header-content{
+        flex-direction: column;
+    }
+
+    .header__hero-tablet{
+        display: block;
+        margin-bottom: 72px;
+    }
+
+    .header__hero-left{
+        display: none;
+    }
+
+    .header__hero-right{
+        display: none;
+    }
+
+    .cards-wrapper{
+        column-gap: 11px;
+        margin: 0 auto 48px auto;
+        grid-template-columns: 164px 164px 164px 164px;
+        justify-content: center;
+    }
+    
+    .cards-wrapper .card{
+        width: 164px;
+        justify-self: center; 
+    }
+
+    .footer-content{
+        flex-direction: column;
+        min-height: 428px;
+        text-align: center;
+    }
+
+    .footer-content h4{
+        margin: 0 0 32px 0;
+    }
+
+    .footer-content p{
+        margin: 0 0 40px 0;
+        max-width: 573px;
+    }
+
+     @media (max-width: 700px){
+
+        .header__hero-text h1{
+            font-size: 40px;
+            line-height: 44px;
+            max-width: 260px;
+        }
+
+        .header__hero-text p{
+            max-width: 327px;
+        }
+
+        .header__button{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header__button .dl{
+            margin: 0 0 16px 0;
+            width: 193px;
+        }
+
+        .header__button .what{
+            width: 139px;
+        }
+
+        .text__meeting h3{
+            font-size: 32px;
+            max-width: 327px;
+        }
+
+        .text__meeting p{
+            font-size: 16px;
+            max-width: 327px;
+        }
+
+        .cards-wrapper{
+            grid-template-areas: 
+            "card1 card2"
+            "card3 card4";
+            grid-template-columns: 151px 151px;
+            column-gap: 25px;
+            row-gap: 25px;
+        }
+
+        .footer-content h4{
+            font-size: 32px;
+        }
+
+        .footer-content p{
+            font-size: 18px;
+            max-width: 327px;
+        }
+
+     }
+
+}
+
